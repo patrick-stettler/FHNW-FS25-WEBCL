@@ -1,0 +1,124 @@
+body {
+			font-family: sans-serif;
+			margin: 5rem;
+		}
+
+		:root {
+			--main-blue: #4c8bf5;
+			--main-light: #fff;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: sans-serif;
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		h2 {
+			font-size: 1.5em;
+		}
+
+		hr {
+			margin: 5rem 0;
+		}
+
+
+		/* Zwei-Spalten-Layout mit Header und Footer */
+		.layout-grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				"header header"
+				"main sidebar"
+				"footer footer";
+			gap: 1rem;
+		}
+
+		@media (max-width: 768px) {
+			.layout-grid {
+				color: var(--main-light);
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"header"
+					"main"
+					"sidebar"
+					"footer";
+
+			}
+		}
+
+		.layout-grid>* {
+			padding: 2rem;
+			background: var(--main-blue);
+			color: var(--main-light);
+		}
+
+		.layout-grid header {
+			grid-area: header;
+		}
+
+		.layout-grid main {
+			grid-area: main;
+		}
+
+		.layout-grid aside {
+			grid-area: sidebar;
+		}
+
+		.layout-grid footer {
+			grid-area: footer;
+		}
+
+
+		/* Responsive Grid mit auto-fit und minmax() */
+		.responsive-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 10px;
+			place-content: center;
+		}
+
+		.responsive-grid .item {
+			background: var(--main-blue);
+			color: var(--main-light);
+			padding: 20px;
+			text-align: center;
+			font-size: 1.2em;
+
+		}
+
+		/* Bento Grid Layout */
+		.bento-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 12px;
+			grid-auto-rows: 150px;
+		}
+
+		.bento-item {
+			display: grid;
+			place-items: center;
+			color: var(--main-light);
+			background: rgb(170, 205, 65);
+		}
+
+		.bento-item.large {
+			grid-column: span 2;
+			grid-row: span 2;
+			background: #4c8bf5;
+		}
+
+		.bento-item.wide {
+			grid-column: span 2;
+			background: #45b69c;
+		}
+
+		.bento-item.tall {
+			grid-row: span 2;
+			background: #f59e42;
+		}

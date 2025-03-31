@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-
 <html lang="de">
 
 <head>
-	<title>CSS Grid</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.png">
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<meta name="publisher" content="">
-	<meta name="robots" content="index, follow">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>CSS Grid – Beispiele</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+	<h1>CSS Grid – Beispiele</h1>
+	<h3>Zwei-Spalten-Layout mit Header und Footer</h3>
+	<div class="layout-grid">
+		<header>Header</header>
+		<main>Hauptinhalt<br>Hier steht mehr Text...</main>
+		<aside>Sidebar</aside>
+		<footer>Footer</footer>
+	</div>
+	<hr>
+	<h3>Responsive Grid mit auto-fit und minmax()</h3>
+	<div class="responsive-grid">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+	</div>
+	<hr>
+	<h2>Spezialfall: Bento Grid Layout</h2>
+	<div class="bento-grid">
+		<div class="bento-item large">Gross</div>
+		<div class="bento-item">Klein</div>
+		<div class="bento-item">Klein</div>
+		<div class="bento-item wide">Breit</div>
+		<div class="bento-item tall">Hoch</div>
+		<div class="bento-item wide ">Breit</div>
+		<div class="bento-item wide ">Breit</div>
+
+	</div>
+
 </body>
 
 </html>
